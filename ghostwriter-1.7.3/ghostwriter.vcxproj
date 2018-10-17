@@ -58,7 +58,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\hunspell-1.6.2\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\release;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sundown\src\html;..\sundown\src;.;..\hunspell-1.6.2\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\release;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>build\release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -179,21 +179,13 @@
     <ClCompile Include="src\ThemeSelectionDialog.cpp" />
     <ClCompile Include="src\TimeLabel.cpp" />
     <ClCompile Include="src\Token.cpp" />
-    <ClCompile Include="src\sundown\autolink.c" />
-    <ClCompile Include="src\sundown\buffer.c" />
     <ClCompile Include="src\color_button.cpp" />
     <ClCompile Include="src\spelling\dictionary_manager.cpp" />
     <ClCompile Include="src\spelling\dictionary_provider_hunspell.cpp" />
     <ClCompile Include="src\spelling\dictionary_provider_voikko.cpp" />
     <ClCompile Include="src\find_dialog.cpp" />
-    <ClCompile Include="src\sundown\houdini_href_e.c" />
-    <ClCompile Include="src\sundown\houdini_html_e.c" />
-    <ClCompile Include="src\sundown\html.c" />
-    <ClCompile Include="src\sundown\html_smartypants.c" />
     <ClCompile Include="src\image_button.cpp" />
-    <ClCompile Include="src\sundown\markdown.c" />
     <ClCompile Include="src\spelling\spell_checker.cpp" />
-    <ClCompile Include="src\sundown\stack.c" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\AbstractStatisticsWidget.h">
@@ -458,8 +450,6 @@
     <ClInclude Include="src\Token.h" />
     <ClInclude Include="src\spelling\abstract_dictionary.h" />
     <ClInclude Include="src\spelling\abstract_dictionary_provider.h" />
-    <ClInclude Include="src\sundown\autolink.h" />
-    <ClInclude Include="src\sundown\buffer.h" />
     <CustomBuild Include="src\color_button.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\color_button.h;build\release\moc_predefs.h;C:\Qt\5.11.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DAPPVERSION=\"1.7.3\" -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WEBKITWIDGETS_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/build/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3 -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling/hunspell -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKitWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtSvg -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKit -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtConcurrent -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" src\color_button.h -o build\release\moc_color_button.cpp</Command>
@@ -493,9 +483,6 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC src/find_dialog.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\debug\moc_find_dialog.cpp;%(Outputs)</Outputs>
     </CustomBuild>
-    <ClInclude Include="src\sundown\houdini.h" />
-    <ClInclude Include="src\sundown\html.h" />
-    <ClInclude Include="src\sundown\html_blocks.h" />
     <CustomBuild Include="src\image_button.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\image_button.h;build\release\moc_predefs.h;C:\Qt\5.11.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DAPPVERSION=\"1.7.3\" -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WEBKITWIDGETS_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/build/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3 -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling/hunspell -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKitWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtSvg -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKit -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtConcurrent -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" src\image_button.h -o build\release\moc_image_button.cpp</Command>
@@ -506,7 +493,6 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC src/image_button.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\debug\moc_image_button.cpp;%(Outputs)</Outputs>
     </CustomBuild>
-    <ClInclude Include="src\sundown\markdown.h" />
     <CustomBuild Include="src\spelling\spell_checker.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\spelling\spell_checker.h;build\release\moc_predefs.h;C:\Qt\5.11.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DAPPVERSION=\"1.7.3\" -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WEBKITWIDGETS_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/build/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3 -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling/hunspell -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src -IC:/Users/miche/Downloads/ghostwriter/ghostwriter-1.7.3/src/spelling -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKitWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtSvg -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWebKit -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtConcurrent -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" src\spelling\spell_checker.h -o build\release\moc_spell_checker.cpp</Command>
@@ -517,7 +503,6 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC src/spelling/spell_checker.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\debug\moc_spell_checker.cpp;%(Outputs)</Outputs>
     </CustomBuild>
-    <ClInclude Include="src\sundown\stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="build\debug\moc_AbstractStatisticsWidget.cpp">
@@ -875,6 +860,9 @@
   <ItemGroup>
     <ProjectReference Include="..\hunspell-1.6.2\msvc\libhunspell.vcxproj">
       <Project>{53609bb3-d874-465c-af7b-df626db0d89b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\sundown\sundown.vcxproj">
+      <Project>{496f8cca-5b89-4acc-ae3a-9b8d687af325}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

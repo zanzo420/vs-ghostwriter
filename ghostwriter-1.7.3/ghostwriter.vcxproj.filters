@@ -45,10 +45,6 @@
       <Extensions>ts;xlf</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="updateqm">
-      <UniqueIdentifier>{E0D8C965-CC5F-43d7-AD63-FAEF0BBC0F85}-updateqm</UniqueIdentifier>
-      <ParseFiles>false</ParseFiles>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AbstractStatisticsWidget.cpp">
@@ -168,12 +164,6 @@
     <ClCompile Include="src\Token.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\sundown\autolink.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sundown\buffer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\color_button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -189,28 +179,10 @@
     <ClCompile Include="src\find_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\sundown\houdini_href_e.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sundown\houdini_html_e.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sundown\html.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sundown\html_smartypants.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\image_button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\sundown\markdown.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\spelling\spell_checker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sundown\stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -353,12 +325,6 @@
     <ClInclude Include="src\spelling\abstract_dictionary_provider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\sundown\autolink.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sundown\buffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <CustomBuild Include="src\color_button.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
@@ -377,58 +343,43 @@
     <CustomBuild Include="src\find_dialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <ClInclude Include="src\sundown\houdini.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sundown\html.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sundown\html_blocks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <CustomBuild Include="src\image_button.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <ClInclude Include="src\sundown\markdown.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <CustomBuild Include="src\spelling\spell_checker.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <ClInclude Include="src\sundown\stack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="translations\ghostwriter_cs.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_de.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_en.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_es.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_fr.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_it.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_ja.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_pl.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_pt_BR.ts">
+    <CustomBuild Include="translations\ghostwriter_zh.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_ru.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_zh.ts">
+    <CustomBuild Include="translations\ghostwriter_pt_BR.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_pl.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_ja.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_it.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_fr.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_es.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_en.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_de.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_cs.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
   </ItemGroup>
