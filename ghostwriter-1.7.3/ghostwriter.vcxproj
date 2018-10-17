@@ -1191,200 +1191,200 @@
     <CustomBuild Include="translations\ghostwriter_cs.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_cs.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_cs.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm build\release\translations\ghostwriter_cs.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm build\release\translations\ghostwriter_cs.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_cs.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_cs.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm build\release\translations\ghostwriter_cs.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm build\release\translations\ghostwriter_cs.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_cs.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_cs.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_de.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_de.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_de.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm build\release\translations\ghostwriter_de.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm build\release\translations\ghostwriter_de.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_de.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_de.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm build\release\translations\ghostwriter_de.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm build\release\translations\ghostwriter_de.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_de.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_de.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_en.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_en.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_en.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm build\release\translations\ghostwriter_en.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm build\release\translations\ghostwriter_en.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_en.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_en.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm build\release\translations\ghostwriter_en.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm build\release\translations\ghostwriter_en.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_en.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_en.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_es.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_es.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_es.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm build\release\translations\ghostwriter_es.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm build\release\translations\ghostwriter_es.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_es.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_es.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm build\release\translations\ghostwriter_es.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm build\release\translations\ghostwriter_es.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_es.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_es.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_fr.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_fr.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_fr.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm build\release\translations\ghostwriter_fr.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm build\release\translations\ghostwriter_fr.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_fr.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_fr.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm build\release\translations\ghostwriter_fr.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm build\release\translations\ghostwriter_fr.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_fr.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_fr.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_it.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_it.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_it.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm build\release\translations\ghostwriter_it.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm build\release\translations\ghostwriter_it.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_it.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_it.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm build\release\translations\ghostwriter_it.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm build\release\translations\ghostwriter_it.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_it.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_it.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_ja.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_ja.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_ja.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm build\release\translations\ghostwriter_ja.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm build\release\translations\ghostwriter_ja.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_ja.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_ja.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm build\release\translations\ghostwriter_ja.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm build\release\translations\ghostwriter_ja.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ja.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ja.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_pl.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_pl.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_pl.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm build\release\translations\ghostwriter_pl.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm build\release\translations\ghostwriter_pl.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_pl.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_pl.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm build\release\translations\ghostwriter_pl.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm build\release\translations\ghostwriter_pl.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pl.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pl.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_pt_BR.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm build\release\translations\ghostwriter_pt_BR.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm build\release\translations\ghostwriter_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm build\release\translations\ghostwriter_pt_BR.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm build\release\translations\ghostwriter_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_pt_BR.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_pt_BR.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_ru.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_ru.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_ru.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm build\release\translations\ghostwriter_ru.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm build\release\translations\ghostwriter_ru.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_ru.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_ru.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm build\release\translations\ghostwriter_ru.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm build\release\translations\ghostwriter_ru.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_ru.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_ru.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_zh.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">translations\ghostwriter_zh.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">translations\ghostwriter_zh.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm build\release\translations\ghostwriter_zh.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm build\release\translations\ghostwriter_zh.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\release\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\release\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">translations\ghostwriter_zh.ts;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">translations\ghostwriter_zh.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm build\release\translations\ghostwriter_zh.qm</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm build\release\translations\ghostwriter_zh.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe -silent translations\ghostwriter_zh.ts -qm $(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.11.2\msvc2015\bin\lrelease.exe</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\release\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\release\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\$(ProjectName)\translations\ghostwriter_zh.qm;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
