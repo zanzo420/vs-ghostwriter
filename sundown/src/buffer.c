@@ -16,6 +16,7 @@
  */
 
 #define BUFFER_MAX_ALLOC_SIZE (1024 * 1024 * 16) //16mb
+#pragma warning(disable : 4996)
 
 #include "buffer.h"
 
