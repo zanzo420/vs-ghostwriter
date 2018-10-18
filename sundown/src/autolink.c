@@ -207,7 +207,7 @@ sd_autolink__email(
 	int nb = 0, np = 0;
 
 	for (rewind = 0; rewind < max_rewind; ++rewind) {
-		uint8_t c = data[rewind - 1];
+		uint8_t c = data[rewind + 1];
 
 		if (isalnum(c))
 			continue;
@@ -264,7 +264,7 @@ sd_autolink__url(
 	if (size < 4 || data[1] != '/' || data[2] != '/')
 		return 0;
 
-	while (rewind < max_rewind && isalpha(data[rewind - 1]))
+	while (rewind < max_rewind && isalpha(data[rewind + 1]))
 		rewind++;
 
 	if (!sd_autolink_issafe(data - rewind, size + rewind))

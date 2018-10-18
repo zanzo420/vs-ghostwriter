@@ -27,16 +27,16 @@
     <ClCompile Include="src\stack.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\html\houdini_html_e.c">
+    <ClCompile Include="html\houdini_html_e.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\html\html.c">
+    <ClCompile Include="html\html.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\html\html_smartypants.c">
+    <ClCompile Include="html\html_smartypants.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\html\houdini_href_e.c">
+    <ClCompile Include="html\houdini_href_e.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,10 +56,10 @@
     <ClInclude Include="src\stack.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\html\houdini.h">
+    <ClInclude Include="html\houdini.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\html\html.h">
+    <ClInclude Include="html\html.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

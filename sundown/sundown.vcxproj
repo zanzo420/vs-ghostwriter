@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="html\houdini_href_e.c" />
+    <ClCompile Include="html\houdini_html_e.c" />
+    <ClCompile Include="html\html.c" />
+    <ClCompile Include="html\html_smartypants.c" />
     <ClCompile Include="src\autolink.c" />
     <ClCompile Include="src\buffer.c" />
-    <ClCompile Include="src\html\houdini_href_e.c" />
-    <ClCompile Include="src\html\houdini_html_e.c" />
-    <ClCompile Include="src\html\html.c" />
-    <ClCompile Include="src\html\html_smartypants.c" />
     <ClCompile Include="src\markdown.c" />
     <ClCompile Include="src\stack.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="html\houdini.h" />
+    <ClInclude Include="html\html.h" />
     <ClInclude Include="src\autolink.h" />
     <ClInclude Include="src\buffer.h" />
-    <ClInclude Include="src\html\houdini.h" />
-    <ClInclude Include="src\html\html.h" />
     <ClInclude Include="src\html_blocks.h" />
     <ClInclude Include="src\markdown.h" />
     <ClInclude Include="src\stack.h" />
@@ -66,9 +66,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -97,7 +97,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src\html;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>html;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
