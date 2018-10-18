@@ -349,37 +349,37 @@
     <CustomBuild Include="src\spelling\spell_checker.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_cs.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_de.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_en.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_es.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_fr.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_it.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_ja.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_pl.ts">
-      <Filter>Translation Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_pt_BR.ts">
+    <CustomBuild Include="translations\ghostwriter_zh.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
     <CustomBuild Include="translations\ghostwriter_ru.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="translations\ghostwriter_zh.ts">
+    <CustomBuild Include="translations\ghostwriter_pt_BR.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_pl.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_ja.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_it.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_fr.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_es.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_en.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_de.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_cs.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
   </ItemGroup>
