@@ -58,7 +58,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\sundown\html;..\sundown\src;.;..\hunspell-1.6.2\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\release;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sundown\html;..\sundown\src;.;..\hunspell\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\release;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>build\release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -101,7 +101,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\hunspell-1.6.2\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\debug;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\hunspell\src\hunspell;src;src\spelling;C:\Qt\5.11.2\msvc2017_64\include;C:\Qt\5.11.2\msvc2017_64\include\QtPrintSupport;C:\Qt\5.11.2\msvc2017_64\include\QtWebKitWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtSvg;C:\Qt\5.11.2\msvc2017_64\include\QtWidgets;C:\Qt\5.11.2\msvc2017_64\include\QtWebKit;C:\Qt\5.11.2\msvc2017_64\include\QtGui;C:\Qt\5.11.2\msvc2017_64\include\QtANGLE;C:\Qt\5.11.2\msvc2017_64\include\QtNetwork;C:\Qt\5.11.2\msvc2017_64\include\QtConcurrent;C:\Qt\5.11.2\msvc2017_64\include\QtCore;build\debug;\include;C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>build\debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -858,7 +858,7 @@
     <ResourceCompile Include="resources\windows\ghostwriter.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\hunspell-1.6.2\msvc\libhunspell.vcxproj">
+    <ProjectReference Include="..\hunspell\msvc\libhunspell.vcxproj">
       <Project>{53609bb3-d874-465c-af7b-df626db0d89b}</Project>
     </ProjectReference>
     <ProjectReference Include="..\sundown\sundown.vcxproj">
