@@ -29,70 +29,70 @@ class QTimer;
  */
 class SessionStatistics : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
-public:
-	/**
-	 * Constructor.
-	 */
-	SessionStatistics(QObject* parent = NULL);
+    public:
+        /**
+         * Constructor.
+         */
+        SessionStatistics(QObject* parent = NULL);
 
-	/**
-	 * Destructor.
-	 */
-	virtual ~SessionStatistics();
+        /**
+         * Destructor.
+         */
+        virtual ~SessionStatistics();
 
-signals:
-	/**
-	 * Emitted when word count changes.
-	 */
-	void wordCountChanged(int value);
+    signals:
+        /**
+         * Emitted when word count changes.
+         */
+        void wordCountChanged(int value);
 
-	/**
-	 * Emitted when page count changes.
-	 */
-	void pageCountChanged(int value);
+        /**
+         * Emitted when page count changes.
+         */
+        void pageCountChanged(int value);
 
-	/**
-	 * Emitted when words per minute change.
-	 */
-	void wordsPerMinuteChanged(int value);
+        /**
+         * Emitted when words per minute change.
+         */
+        void wordsPerMinuteChanged(int value);
 
-	/**
-	 * Emitted when writing time in this session changes.
-	 */
-	void writingTimeChanged(int value);
+        /**
+         * Emitted when writing time in this session changes.
+         */
+        void writingTimeChanged(int value);
 
-	/**
-	 * Emitted when the percentage of time spent idle
-	 * (i.e., not typing) changes.
-	 */
-	void idleTimePercentageChanged(int percentage);
+        /**
+         * Emitted when the percentage of time spent idle
+         * (i.e., not typing) changes.
+         */
+        void idleTimePercentageChanged(int percentage);
 
-public slots:
-	/**
-	 * Resets statistics for a new writing session.
-	 */
-	void startNewSession(int lastWordCount = 0);
+    public slots:
+        /**
+         * Resets statistics for a new writing session.
+         */
+        void startNewSession(int lastWordCount = 0);
 
-	void onDocumentWordCountChanged(int newWordCount);
-	void onTypingPaused();
-	void onTypingResumed();
+        void onDocumentWordCountChanged(int newWordCount);
+        void onTypingPaused();
+        void onTypingResumed();
 
-private slots:
-	void onSessionTimerExpired();
+    private slots:
+        void onSessionTimerExpired();
 
-private:
-	int sessionWordCount;
-	int totalWordsWritten;
-	int lastWordCount;
-	QTimer* sessionTimer;
-	bool idle;
-	unsigned long totalSeconds;
-	unsigned long idleSeconds;
-	unsigned long secondsSinceTypingPaused;
+    private:
+        int sessionWordCount;
+        int totalWordsWritten;
+        int lastWordCount;
+        QTimer* sessionTimer;
+        bool idle;
+        unsigned long totalSeconds;
+        unsigned long idleSeconds;
+        unsigned long secondsSinceTypingPaused;
 
-	int calculateWPM() const;
+        int calculateWPM() const;
 };
 
 #endif // SESSIONSTATISTICS_H

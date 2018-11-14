@@ -42,8 +42,6 @@ Finally, you may follow the build instructions below to install on Linux with th
 
 This will fix the issue for all your Qt 5 applications, including *ghostwriter*.  However, it also places the menus for the application into the application's window, rather than into the global menu.
 
-An alternative workaround is to compile ghostwriter for yourself using Qt 4.8.  Shortcuts should properly work in the global menu for Qt 4.8 applications.  Regardless of your preferred workaround, this appmenu-qt5 bug should be fixed in the near future.  You can use the Launchpad link above to monitor the status of this bug.
-
 **GNU/Linux Help:**  For further help with troubleshooting issues for Qt5 applications, including *ghostwriter*, please see the [GNU/Linux Troubleshooting for Q5 Applications](https://github.com/wereturtle/ghostwriter/wiki/GNU---Linux-Troubleshooting-for-Qt5-Applications) topic in the community wiki.
 
 MacOS - Testers needed.
@@ -54,7 +52,7 @@ You can download an application bundle for MacOS and copy it under /Applications
 Build
 =====
 
-If you wish to build from the source code, you will need either Qt 4.8 or Qt 5, available from <http://www.qt.io/> if you are on Windows, or in your Linux distribution's repository. If you're on MacOS you'll need Qt5.5 from brew. 
+If you wish to build from the source code, you will need Qt 5, available from <http://www.qt.io/> if you are on Windows, or in your Linux distribution's repository. If you are on MacOS you will need Qt5.5 from brew.
 
 This documentation assumes you already have the source code unzipped in a folder.
 
@@ -79,23 +77,17 @@ Unless you have built *ghostwriter* as a standalone executable statically linked
 Linux
 -----
 
-These instructions are for Debian or Ubuntu distributions.  However, they will be similar for other Linux flavors.
+Before proceeding, ensure that you have the necessary packages installed for Qt 5.
 
-Before proceeding, ensure that you have the following packages installed for Qt 5:
+For Debian or Ubuntu distributions:
 
-* qt5-default,
-* qtbase5-dev,
-* libqt5svg5-dev,
-* qtmultimedia5-dev,
-* libqt5webkit5-dev,
-* libhunspell-dev,
-* pkg-config
-* libqt5concurrent5
-* libqt5printsupport5
-* libqt5svg5
-* qttools5-dev-tools
+    $ sudo apt install qt5-default qtbase5-dev libqt5svg5-dev qtmultimedia5-dev libqt5webkit5-dev libhunspell-dev pkg-config libqt5concurrent5 libqt5printsupport5
 
-Note that you may also compile and run against Qt 4.8;  however, Qt 5 is optimal for for its newer features.  Qt 4.8 has similar package dependencies to what is listed above.  You will have to find their Qt 4.8 equivalents in your Linux distribution's repository.
+For fedora:
+
+    $ sudo dnf install qt-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qtmultimedia-devel qt5-qtwebkit-devel hunspell-devel
+
+For other Linux flavors, the list will be similar; `qmake` will tell you if you are missing anything.
 
 Next, open a terminal window, and enter the following commands:
 
@@ -116,6 +108,7 @@ For example, to install under `/opt`, you would enter:
 
 MacOS
 -----
+
 1. You need either *XCode* or *XCode command line tools* to install and run brew and to build ghostwriter and other Qt applications.
 
 - You can install XCode from Mac App Store
@@ -160,6 +153,29 @@ $ sudo cp -R ./build/release/ghostwriter.app /Applications
 $ sudo ln -s /Applications/ghostwriter.app/Contents/MacOS/ghostwriter /usr/local/bin
 ```
 
+FreeBSD
+-------
+
+Prerequisites
+
+* Git (`git` or `git-lite`)
+
+Install the dependencies
+
+    sudo pkg inst hunspell en-hunspell pkgconf qt5-svg qt5-multimedia \
+    qt5-webkit qt5-concurrent qt5-printsupport qt5-buildtools qt5-qmake \
+    qt5-linguist
+
+Get the sources
+
+    git clone https://github.com/wereturtle/ghostwriter
+
+Build
+
+    cd ghostwriter
+    qmake
+    make
+    sudo make install
 
 Command Line Usage
 ==================

@@ -35,7 +35,7 @@ CONFIG += warn_on
 
 # Set program version
 isEmpty(VERSION) {
-    VERSION = 1.7.3
+    VERSION = v1.7.4
 }
 DEFINES += APPVERSION='\\"$${VERSION}\\"'
 
@@ -73,7 +73,17 @@ macx {
         src/spelling/dictionary_provider_voikko.h
 
     SOURCES += src/spelling/dictionary_provider_hunspell.cpp \
-        src/spelling/dictionary_provider_voikko.cpp
+        src/spelling/dictionary_provider_voikko.cpp \
+        src/spelling/hunspell/affentry.cxx \
+        src/spelling/hunspell/affixmgr.cxx \
+        src/spelling/hunspell/csutil.cxx \
+        src/spelling/hunspell/filemgr.cxx \
+        src/spelling/hunspell/hashmgr.cxx \
+        src/spelling/hunspell/hunspell.cxx \
+        src/spelling/hunspell/hunzip.cxx \
+        src/spelling/hunspell/phonet.cxx \
+        src/spelling/hunspell/replist.cxx \
+        src/spelling/hunspell/suggestmgr.cxx
 
 } else:unix {
     CONFIG += link_pkgconfig

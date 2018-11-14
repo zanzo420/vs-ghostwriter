@@ -22,14 +22,14 @@
 #include "SessionStatistics.h"
 
 SessionStatistics::SessionStatistics(QObject* parent)
-	: QObject(parent)
+    : QObject(parent)
 {
-	sessionTimer = new QTimer(this);
-	connect(sessionTimer, SIGNAL(timeout()), this, SLOT(onSessionTimerExpired()));
-	sessionTimer->setInterval(1000);
-	idle = true;
+    sessionTimer = new QTimer(this);
+    connect(sessionTimer, SIGNAL(timeout()), this, SLOT(onSessionTimerExpired()));
+    sessionTimer->setInterval(1000);
+    idle = true;
 
-	startNewSession(0);
+    startNewSession(0);
 }
 
 SessionStatistics::~SessionStatistics()
@@ -39,97 +39,97 @@ SessionStatistics::~SessionStatistics()
 
 void SessionStatistics::startNewSession(int initialWordCount)
 {
-	sessionWordCount = 0;
-	totalWordsWritten = 0;
-	lastWordCount = initialWordCount;
-	totalSeconds = 0;
-	idleSeconds = 0;
-	secondsSinceTypingPaused = 0;
-	idle = true;
-	sessionTimer->stop();
-	sessionTimer->start();
+    sessionWordCount = 0;
+    totalWordsWritten = 0;
+    lastWordCount = initialWordCount;
+    totalSeconds = 0;
+    idleSeconds = 0;
+    secondsSinceTypingPaused = 0;
+    idle = true;
+    sessionTimer->stop();
+    sessionTimer->start();
 
-	emit wordCountChanged(0);
-	emit pageCountChanged(0);
-	emit wordsPerMinuteChanged(0);
-	emit writingTimeChanged(0);
-	emit idleTimePercentageChanged(100);
+    emit wordCountChanged(0);
+    emit pageCountChanged(0);
+    emit wordsPerMinuteChanged(0);
+    emit writingTimeChanged(0);
+    emit idleTimePercentageChanged(100);
 }
 
 void SessionStatistics::onDocumentWordCountChanged(int newWordCount)
 {
-	int deltaWords = newWordCount - lastWordCount;
+    int deltaWords = newWordCount - lastWordCount;
 
-	if (deltaWords > 0)
-	{
-		totalWordsWritten += deltaWords;
-	}
+    if (deltaWords > 0)
+    {
+        totalWordsWritten += deltaWords;
+    }
 
-	sessionWordCount += deltaWords;
-	lastWordCount = newWordCount;
+    sessionWordCount += deltaWords;
+    lastWordCount = newWordCount;
 
-	if (sessionWordCount < 0)
-	{
-		sessionWordCount = 0;
-	}
+    if (sessionWordCount < 0)
+    {
+        sessionWordCount = 0;
+    }
 
-	emit wordCountChanged(sessionWordCount);
-	emit pageCountChanged(sessionWordCount / 250);
+    emit wordCountChanged(sessionWordCount);
+    emit pageCountChanged(sessionWordCount / 250);
 
-	// For the first minute of the session, calculate WPM.
-	// Afterward, only update WPM when the session timer
-	// expires to keep the count from looking jittery.
-	//
-	if (totalSeconds < 60)
-	{
-		emit wordsPerMinuteChanged(calculateWPM());
-	}
+    // For the first minute of the session, calculate WPM.
+    // Afterward, only update WPM when the session timer
+    // expires to keep the count from looking jittery.
+    //
+    if (totalSeconds < 60)
+    {
+        emit wordsPerMinuteChanged(calculateWPM());
+    }
 }
 
 void SessionStatistics::onTypingPaused()
 {
-	idle = true;
+    idle = true;
 }
 
 void SessionStatistics::onTypingResumed()
 {
-	idle = false;
-	secondsSinceTypingPaused = 0;
+    idle = false;
+    secondsSinceTypingPaused = 0;
 }
 
 void SessionStatistics::onSessionTimerExpired()
 {
-	if (idle)
-	{
-		// typingPaused signal from editor can be milliseconds apart from the
-		// last keystroke.  Ensure that idleSeconds gets incremented only if
-		// about 1 second has passed since the typingPaused signal was emitted.
-		//
-		if (secondsSinceTypingPaused >= 1)
-		{
-			idleSeconds++;
-		}
+    if (idle)
+    {
+        // typingPaused signal from editor can be milliseconds apart from the
+        // last keystroke.  Ensure that idleSeconds gets incremented only if
+        // about 1 second has passed since the typingPaused signal was emitted.
+        //
+        if (secondsSinceTypingPaused >= 1)
+        {
+            idleSeconds++;
+        }
 
-		secondsSinceTypingPaused++;
-	}
+        secondsSinceTypingPaused++;
+    }
 
-	totalSeconds++;
+    totalSeconds++;
 
-	emit wordsPerMinuteChanged(calculateWPM());
-	emit writingTimeChanged(totalSeconds / 60);
-	emit idleTimePercentageChanged((int)(((float)idleSeconds / (float)totalSeconds) * 100.0f));
+    emit wordsPerMinuteChanged(calculateWPM());
+    emit writingTimeChanged(totalSeconds / 60);
+    emit idleTimePercentageChanged((int) (((float)idleSeconds / (float)totalSeconds) * 100.0f));
 }
 
 int SessionStatistics::calculateWPM() const
 {
-	unsigned long delta = totalSeconds - idleSeconds;
+    unsigned long delta = totalSeconds - idleSeconds;
 
-	if (delta > 0)
-	{
-		return (int)(((float)totalWordsWritten * 60.0f) / (float)delta);
-	}
-	else
-	{
-		return totalWordsWritten;
-	}
+    if (delta > 0)
+    {
+        return (int)(((float)totalWordsWritten * 60.0f) / (float)delta);
+    }
+    else
+    {
+        return totalWordsWritten;
+    }
 }

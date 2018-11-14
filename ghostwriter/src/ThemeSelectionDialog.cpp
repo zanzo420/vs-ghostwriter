@@ -251,7 +251,7 @@ void ThemeSelectionDialog::onNewTheme()
     currentThemeIsNew = true;
     currentTheme = newTheme;
     currentThemeIsValid = true;
-	this->themeListWidget->setCurrentItem(item);
+    this->themeListWidget->setCurrentItem(item);
 
     ThemeEditorDialog themeEditorDialog(newTheme, this);
     connect(&themeEditorDialog, SIGNAL(themeUpdated(Theme)), this, SLOT(onThemeUpdated(Theme)));
