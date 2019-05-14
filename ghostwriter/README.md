@@ -49,6 +49,13 @@ MacOS - Testers needed.
 
 You can download an application bundle for MacOS and copy it under /Applications (for all the users) or $HOME/Applications (for the current user). That application should work on osx 10.10+, but was tested only on macOS 10.13. Please remember that this build is experimental and you'll find some bugs. Please report those on the issue tracker.
 
+FreeBSD
+-------
+
+A package exist for FreeBSD, so just type:
+
+    sudo pkg install ghostwriter
+
 Build
 =====
 
@@ -81,11 +88,11 @@ Before proceeding, ensure that you have the necessary packages installed for Qt 
 
 For Debian or Ubuntu distributions:
 
-    $ sudo apt install qt5-default qtbase5-dev libqt5svg5-dev qtmultimedia5-dev libqt5webkit5-dev libhunspell-dev pkg-config libqt5concurrent5 libqt5printsupport5
+    $ sudo apt install g++ qt5-default qtbase5-dev libqt5svg5-dev qtmultimedia5-dev qtwebengine5-dev libhunspell-dev pkg-config libqt5concurrent5 qttools5-dev-tools
 
 For fedora:
 
-    $ sudo dnf install qt-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qtmultimedia-devel qt5-qtwebkit-devel hunspell-devel
+    $ sudo dnf install qt-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qtmultimedia-devel qt5-qtwebengine-devel hunspell-devel
 
 For other Linux flavors, the list will be similar; `qmake` will tell you if you are missing anything.
 
@@ -94,7 +101,7 @@ Next, open a terminal window, and enter the following commands:
     $ cd <your_ghostwriter_folder_location>
     $ qmake
     $ make
-    $ make install
+    # make install
 
 The last command will install *ghostwriter* on your machine.  If you need to install the application in an alternative location to `/usr/local`, enter the following command in lieu of the second command above, passing in the desired value for `PREFIX`:
 
@@ -163,8 +170,9 @@ Prerequisites
 Install the dependencies
 
     sudo pkg inst hunspell en-hunspell pkgconf qt5-svg qt5-multimedia \
-    qt5-webkit qt5-concurrent qt5-printsupport qt5-buildtools qt5-qmake \
-    qt5-linguist
+    qt5-webengine qt5-concurrent qt5-buildtools qt5-qmake qt5-linguist
+
+You will also need to install QtWebEngine
 
 Get the sources
 

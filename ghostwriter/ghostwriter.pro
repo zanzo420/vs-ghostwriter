@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Copyright (C) 2014-2018 wereturtle
+# Copyright (C) 2014-2019 wereturtle
 # Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,23 +19,24 @@
 ################################################################################
 
 lessThan(QT_MAJOR_VERSION, 5) {
-    error("ghostwriter requires Qt 5.2 or greater")
+    error("ghostwriter requires Qt 5.8 or greater")
 }
 
-isEqual(QT_MAJOR_VERSION, 5) : lessThan(QT_MINOR_VERSION, 2) {
-    error("ghostwriter requires Qt 5.2 or greater")
+isEqual(QT_MAJOR_VERSION, 5) : lessThan(QT_MINOR_VERSION, 8) {
+    error("ghostwriter requires Qt 5.8 or greater")
 }
 
 TEMPLATE = app
 
-QT += printsupport webkitwidgets widgets concurrent svg
+QT += widgets concurrent svg webenginewidgets webengine webchannel
 
 CONFIG -= debug
 CONFIG += warn_on
+CONFIG += c++11
 
 # Set program version
 isEmpty(VERSION) {
-    VERSION = v1.7.4
+    VERSION = v1.8.0
 }
 DEFINES += APPVERSION='\\"$${VERSION}\\"'
 
@@ -126,7 +127,6 @@ HEADERS += src/MainWindow.h \
     src/MarkdownHighlighter.h \
     src/MarkdownStyles.h \
     src/MessageBoxHelper.h \
-    src/GraphicsFadeEffect.h \
     src/SundownExporter.h \
     src/StyleSheetManagerDialog.h \
     src/SimpleFontDialog.h \
@@ -142,6 +142,8 @@ HEADERS += src/MainWindow.h \
     src/SessionStatisticsWidget.h \
     src/PreferencesDialog.h \
     src/PreviewOptionsDialog.h \
+    src/StringObserver.h \
+    src/SandboxedWebPage.h \
     src/find_dialog.h \
     src/image_button.h \
     src/color_button.h \
@@ -182,7 +184,6 @@ SOURCES += src/AppMain.cpp \
     src/Outline.cpp \
     src/MarkdownHighlighter.cpp \
     src/MessageBoxHelper.cpp \
-    src/GraphicsFadeEffect.cpp \
     src/StyleSheetManagerDialog.cpp \
     src/SimpleFontDialog.cpp \
     src/SundownExporter.cpp \
@@ -197,6 +198,8 @@ SOURCES += src/AppMain.cpp \
     src/DocumentStatisticsWidget.cpp \
     src/PreferencesDialog.cpp \
     src/PreviewOptionsDialog.cpp \
+    src/StringObserver.cpp \
+    src/SandboxedWebPage.cpp \
     src/find_dialog.cpp \
     src/image_button.cpp \
     src/color_button.cpp \

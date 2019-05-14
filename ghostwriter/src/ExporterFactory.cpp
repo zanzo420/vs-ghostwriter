@@ -22,7 +22,7 @@
 #include <QSettings>
 
 #include "ExporterFactory.h"
-#include "SundownExporter.h"
+#include "SundownExporter.cpp"
 #include "CommandLineExporter.h"
 
 ExporterFactory* ExporterFactory::instance = NULL;
@@ -388,7 +388,7 @@ void ExporterFactory::addPandocExporter
 
     exporter->setHtmlRenderCommand
     (
-        QString("pandoc -f ") +
+        QString("pandoc --mathml -f ") +
             inputFormat +
             CommandLineExporter::SMART_TYPOGRAPHY_ARG +
             " -t html"
@@ -401,7 +401,7 @@ void ExporterFactory::addPandocExporter
             QString("pandoc -f ") +
             inputFormat +
             CommandLineExporter::SMART_TYPOGRAPHY_ARG +
-            " -t %1 --standalone --quiet -o " +
+            " -t %1 --standalone --mathml --quiet -o " +
             CommandLineExporter::OUTPUT_FILE_PATH_VAR;
     }
     else
@@ -411,7 +411,7 @@ void ExporterFactory::addPandocExporter
             QString("pandoc -f ") +
             inputFormat +
             CommandLineExporter::SMART_TYPOGRAPHY_ARG +
-            " -t %1 --standalone -o " +
+            " -t %1 --standalone --mathml -o " +
             CommandLineExporter::OUTPUT_FILE_PATH_VAR;
     }
 
@@ -457,12 +457,17 @@ void ExporterFactory::addPandocExporter
         standardExportStr.arg("context") +
             " --variable pagenumbering:location=footer --variable layout:header=0mm --variable layout:top=1in --variable layout:bottom=1in --variable layout:leftmargin=1in --variable layout:rightmargin=1in -Vlinkcolor=blue"
     );
+
+    // Note: Do not use --mathjax option with WKHTMLTOPDF export, as this will
+    // cause pandoc to hang.
+    //
     exporter->addFileExportCommand
     (
         ExportFormat::PDF_WKHTML,
         standardExportStr.arg("html5") +
-            " -Vmargin-left=1in -Vmargin-right=1in -Vmargin-top=1in -Vmargin-bottom=1in --mathjax"
+            " -Vmargin-left=1in -Vmargin-right=1in -Vmargin-top=1in -Vmargin-bottom=1in"
     );
+
     exporter->addFileExportCommand
     (
         ExportFormat::EPUBV2,

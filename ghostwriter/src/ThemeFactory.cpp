@@ -174,7 +174,7 @@ QStringList ThemeFactory::getAvailableThemes() const
     return themeNames;
 }
 
-Theme ThemeFactory::getPrinterFriendlyTheme() const
+Theme ThemeFactory::getDefaultTheme() const
 {
     QString err;
     return loadTheme(CLASSIC_LIGHT_THEME_NAME, err);

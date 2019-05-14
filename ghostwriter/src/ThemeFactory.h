@@ -52,9 +52,9 @@ class ThemeFactory
         QStringList getAvailableThemes() const;
 
         /**
-         * Gets a theme that can be used with printing to paper.
+         * Gets the default theme.
          */
-        Theme getPrinterFriendlyTheme() const;
+        Theme getDefaultTheme() const;
 
         /**
          * Returns the theme with the given name.  If an error occurs, the
