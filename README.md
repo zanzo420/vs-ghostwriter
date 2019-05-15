@@ -16,14 +16,15 @@ You can go to the section of [releases](https://github.com/michelolvera/vs-ghost
 
 First of all, the following is necessary:
 
-- Visual Studio 2017 (Desktop Development with **C++ installed**).
-- Qt 5.9 (MSVC 2017 64-bit) or greater.
-- [annulen's fork of QtWebKit](https://github.com/annulen/webkit/releases) until the port to QtWebEngine is complete, `qtwebkit-5.212.0_alpha2-qt59-msvc2015-x64.zip` is the newest version at the time of writing, however if you find an `*msvc2017-x64.zip` version, install that one.
+- Visual Studio 2019 (Desktop Development with **C++ installed**).
+- Qt 5.8 (MSVC 2017 64-bit) or greater.
 - Clone the repository or download the source code of the latest released version.
 
 Having all the requirements already mentioned, open the `ghostwriter.sln` project file and compile it in x64 release.
 
 Easy, don't you think?
+
+**If you have problems, you should check the access routes to Qt.**
 
 ## Bug Report
 
