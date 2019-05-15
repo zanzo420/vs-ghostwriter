@@ -15,16 +15,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/wereturtle/ghostwriter/master/resources/linux/screenshot_distraction_free_editing.png</image>
+      <image>http://wereturtle.github.io/ghostwriter/images/dark-theme.png</image>
       <caption>Enjoy a distraction-free writing experience, including a full screen mode and a clean interface</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/wereturtle/ghostwriter/master/resources/linux/screenshot_theming.png</image>
-      <caption>The built-in light and dark themes provide an aesthetic writing experience out of the box</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/wereturtle/ghostwriter/master/resources/linux/screenshot_live_preview.png</image>
-      <caption>Preview your Markdown document in HTML</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">http://wereturtle.github.io/ghostwriter/</url>
@@ -35,6 +27,6 @@
     <binary>ghostwriter</binary>
   </provides>
   <releases>
-    <release version="1.7.4" timestamp="1541880370" />
+    <release version="1.8.0" timestamp="1556401681" />
   </releases>
 </component>
