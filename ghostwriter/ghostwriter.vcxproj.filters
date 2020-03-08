@@ -578,6 +578,12 @@
     <CustomBuild Include="translations\ghostwriter_zh.ts">
       <Filter>Translation Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_ar.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="translations\ghostwriter_nl.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\images\close-hover.svg">
