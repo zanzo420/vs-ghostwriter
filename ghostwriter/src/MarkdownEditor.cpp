@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2014-2018 wereturtle
+ * Copyright (C) 2014-2019 wereturtle
  * Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
  * Copyright (C) Dmitry Shachnev 2012
  *
@@ -145,6 +145,19 @@ MarkdownEditor::MarkdownEditor
         SLOT(checkIfTypingPaused())
     );
     typingTimer->start(1000);
+
+    typingPausedScaledSignalSent = true;
+    scaledTypingHasPaused = true;
+
+    scaledTypingTimer = new QTimer(this);
+    connect
+    (
+        scaledTypingTimer,
+        SIGNAL(timeout()),
+        this,
+        SLOT(checkIfTypingPausedScaled())
+    );
+    scaledTypingTimer->start(1000);
 
     setColorScheme
     (
@@ -327,12 +340,13 @@ void MarkdownEditor::paintEvent(QPaintEvent* event)
     QPlainTextEdit::paintEvent(event);
 
     // Draw the text cursor/caret.
-    if (textCursorVisible)
+    if (textCursorVisible && this->hasFocus())
     {
         // Get the cursor rect so that we have the ideal height for it,
         // and then set it to be 2 pixels wide.  (The width will be zero,
         // because we set it to be that in the constructor so that
         // QPlainTextEdit will not draw another cursor underneath this one.)
+        //
         QRect r = cursorRect();
         r.setWidth(2);
         
@@ -1479,10 +1493,12 @@ void MarkdownEditor::onContentsChanged(int position, int charsAdded, int charsRe
     // onContentsChanged(int, int, int) signal, which is only emitted when the
     // document text actually changes.
     //
-    if (typingHasPaused)
+    if (typingHasPaused || scaledTypingHasPaused)
     {
         typingHasPaused = false;
+        scaledTypingHasPaused = false;
         typingPausedSignalSent = false;
+        typingPausedScaledSignalSent = false;
         emit typingResumed();
     }
 }
@@ -1620,6 +1636,20 @@ void MarkdownEditor::checkIfTypingPaused()
         emit typingPaused();
     }
 
+    typingTimer->stop();
+    typingTimer->start(1000);
+
+    typingHasPaused = true;
+}
+
+void MarkdownEditor::checkIfTypingPausedScaled()
+{
+    if (scaledTypingHasPaused && !typingPausedScaledSignalSent)
+    {
+        typingPausedScaledSignalSent = true;
+        emit typingPausedScaled();
+    }
+
     // Scale timer interval based on document size.
     int interval = (document()->characterCount() / 30000) * 20;
 
@@ -1632,10 +1662,10 @@ void MarkdownEditor::checkIfTypingPaused()
         interval = 20;
     }
 
-    typingTimer->stop();
-    typingTimer->start(interval);
+    scaledTypingTimer->stop();
+    scaledTypingTimer->start(interval);
 
-    typingHasPaused = true;
+    scaledTypingHasPaused = true;
 }
 
 void MarkdownEditor::spellCheckFinished(int result)

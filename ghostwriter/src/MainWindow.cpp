@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2014-2019 wereturtle
+ * Copyright (C) 2014-2020 wereturtle
  * Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -151,7 +151,7 @@ MainWindow::MainWindow(const QString& filePath, QWidget* parent)
     cheatSheetWidget->addItem(tr("[Link](http://url.com \"Title\")"));
     cheatSheetWidget->addItem(tr("[Reference Link][ID]"));
     cheatSheetWidget->addItem(tr("[ID]: http://url.com \"Reference Definition\""));
-    cheatSheetWidget->addItem(tr("![Image][./image.jpg \"Title\"]"));
+    cheatSheetWidget->addItem(tr("![Image](./image.jpg \"Title\")"));
     cheatSheetWidget->addItem(tr("--- *** ___ Horizontal Rule"));
 
     cheatSheetHud =
@@ -243,7 +243,7 @@ MainWindow::MainWindow(const QString& filePath, QWidget* parent)
     connect(sessionStats, SIGNAL(wordCountChanged(int)), sessionStatsWidget, SLOT(setWordCount(int)));
     connect(sessionStats, SIGNAL(pageCountChanged(int)), sessionStatsWidget, SLOT(setPageCount(int)));
     connect(sessionStats, SIGNAL(wordsPerMinuteChanged(int)), sessionStatsWidget, SLOT(setWordsPerMinute(int)));
-    connect(sessionStats, SIGNAL(writingTimeChanged(int)), sessionStatsWidget, SLOT(setWritingTime(int)));
+    connect(sessionStats, SIGNAL(writingTimeChanged(unsigned long)), sessionStatsWidget, SLOT(setWritingTime(unsigned long)));
     connect(sessionStats, SIGNAL(idleTimePercentageChanged(int)), sessionStatsWidget, SLOT(setIdleTime(int)));
     connect(editor, SIGNAL(typingPaused()), sessionStats, SLOT(onTypingPaused()));
     connect(editor, SIGNAL(typingResumed()), sessionStats, SLOT(onTypingResumed()));
@@ -445,7 +445,7 @@ MainWindow::MainWindow(const QString& filePath, QWidget* parent)
             this
         );
 
-    connect(editor, SIGNAL(typingPaused()), htmlPreview, SLOT(updatePreview()));
+    connect(editor, SIGNAL(typingPausedScaled()), htmlPreview, SLOT(updatePreview()));
     connect(outlineWidget, SIGNAL(headingNumberNavigated(int)), htmlPreview, SLOT(navigateToHeading(int)));
     connect(appSettings, SIGNAL(currentHtmlExporterChanged(Exporter*)), htmlPreview, SLOT(setHtmlExporter(Exporter*)));
     connect(appSettings, SIGNAL(currentCssFileChanged(QString)), htmlPreview, SLOT(setStyleSheet(QString)));
@@ -1224,7 +1224,7 @@ void MainWindow::showAbout()
     QString aboutText =
         QString("<p><b>") +  qAppName() + QString(" ")
         + qApp->applicationVersion() + QString("</b></p>")
-        + tr("<p>Copyright &copy; 2014-2019 wereturtle</b>"
+        + tr("<p>Copyright &copy; 2014-2020 wereturtle</b>"
              "<p>You may use and redistribute this software under the terms of the "
              "<a href=\"http://www.gnu.org/licenses/gpl.html\">"
              "GNU General Public License Version 3</a>.</p>"
@@ -2351,7 +2351,9 @@ void MainWindow::applyTheme()
     stream << "QLabel { border: 0; padding: 0; margin: 0; background-color: transparent; "
            << "font-size: "
            << hudFontSize
-           << "pt } "
+           << "pt; color: "
+           << hudFgString
+           << " } "
            << "QScrollBar::horizontal { border: 0; background: transparent; height: 8px; margin: 0 } "
            << "QScrollBar::handle:horizontal { border: 0; background: "
            << hudFgString
@@ -2374,13 +2376,24 @@ void MainWindow::applyTheme()
 
     foreach (HudWindow* hud, huds)
     {
+        // Clear style sheet cache for each HUD.
+        hud->setStyleSheet("");
+
+        // Set HUD colors.
         hud->setForegroundColor(theme.getHudForegroundColor());
         hud->setBackgroundColor(alphaHudBackgroundColor);
     }
 
+    // Clear style sheet cache by setting to empty string before
+    // setting the new style sheet.
+    //
+    outlineWidget->setStyleSheet("");
     outlineWidget->setStyleSheet(styleSheet);
+    cheatSheetWidget->setStyleSheet("");
     cheatSheetWidget->setStyleSheet(styleSheet);
+    documentStatsWidget->setStyleSheet("");
     documentStatsWidget->setStyleSheet(styleSheet);
+    sessionStatsWidget->setStyleSheet("");
     sessionStatsWidget->setStyleSheet(styleSheet);
 
     adjustEditorWidth(this->width());
